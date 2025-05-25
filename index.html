@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tani Cerdas - Pengenalan Teknologi Pertanian Modern</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <!-- Font Awesome untuk ikon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <!-- Header dengan Logo dan Navigasi -->
-    <header>
+    <header class="navbar">
         <div class="container">
             <div class="logo">
                 <!-- Logo dengan ikon dan teks -->
@@ -26,61 +26,48 @@
                 <span class="bar"></span>
             </div>
             
-            <!-- Menu Navigasi -->
-            <nav>
-                <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#profil">Profil</a></li>
-                    <li><a href="#layanan">Layanan</a></li>
-                    <li><a href="#artikel">Artikel</a></li>
-                    <li><a href="#kontak">Kontak</a></li>
-                </ul>
-            </nav>
+<!-- Menu Navigasi -->
+<nav>
+  <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li>
+      <a href="#profil">Profil</a>
+      <ul class="dropdown">
+        <li><a href="profil-kami.html">Profil Kita</a></li>
+      </ul>
+    </li>
+    <li><a href="#layanan">Layanan</a></li>
+    <li class="has-dropdown">
+      <a href="#artikel">Artikel <i class="fas fa-chevron-down"></i></a>
+      <ul class="dropdown">
+        <li><a href="artikel-smart-farming.html">Smart Farming</a></li>
+        <li><a href="artikel-drone.html">Drone Pertanian</a></li>
+        <li><a href="artikel-sensor-tanah.html">Sensor Tanah</a></li>
+        <li><a href="artikel-irigasi.html">Irigasi Otomatis</a></li>
+        <li><a href="artikel-iot.html">IoT Pertanian</a></li>
+        <li><a href="artikel-iot.html">IoT Skala Kecil</a></li>
+      </ul>
+    </li>
+    <li><a href="#kontak">Kontak</a></li>
+  </ul>
+</nav>
+
+
         </div>
     </header>
 
     <!-- Hero Section dengan Slider -->
     <section class="hero">
-        <div class="slider-container">
-            <div class="slide active">
-                <img src="image/drone pertanian fix.jpg" alt="">
-                <!-- <img src="https://source.unsplash.com/1600x900/?agriculture-drone" alt="Drone menyemprot tanaman"> -->
-                <div class="slide-content">
-                    <h2>Modernisasi Pertanian untuk Masa Depan</h2>
-                    <p>Drone pertanian untuk efisiensi penyemprotan dan pemantauan</p>
-                </div>
-            </div>
-            
-            <div class="slide">
-                <img src="https://source.unsplash.com/1600x900/?irrigation-system" alt="Sistem irigasi tetes otomatis">
-                <div class="slide-content">
-                    <h2>Hemat Air, Tingkatkan Hasil</h2>
-                    <p>Teknologi irigasi tetes untuk penggunaan air yang efisien</p>
-                </div>
-            </div>
-            
-            <div class="slide">
-                <img src="https://source.unsplash.com/1600x900/?smart-tractor" alt="Traktor pintar berbasis GPS">
-                <div class="slide-content">
-                    <h2>Presisi Tinggi, Efisiensi Maksimal</h2>
-                    <p>Traktor pintar dengan teknologi GPS untuk pertanian presisi</p>
-                </div>
-            </div>
-            
-            <!-- Navigasi Slider -->
-            <div class="slider-nav">
-                <button class="prev"><i class="fas fa-chevron-left"></i></button>
-                <button class="next"><i class="fas fa-chevron-right"></i></button>
-            </div>
-            
-            <!-- Indikator -->
-            <div class="slider-indicators">
-                <span class="indicator active"></span>
-                <span class="indicator"></span>
-                <span class="indicator"></span>
-            </div>
+        <video autoplay muted loop class="background-video">
+        <source src="/assets/videos/cinematic.mp4" type="video/mp4">
+       TANISUKA
+        </video>
+        <div class="hero-content">
+            <h1>Selamat Datang di Tani Cerdas</h1>
+            <p>Membangun pertanian masa depan</p>
         </div>
     </section>
+
 
     <!-- Bagian Profil - 2 Kolom -->
     <section id="profil" class="profile-section">
@@ -88,8 +75,7 @@
             <div class="two-column">
                 <div class="column image-column">
                     <!-- Gambar alat pertanian modern -->
-                     <img src="image/sensor tanah juga.png" alt="">
-                    <!-- <img src="https://source.unsplash.com/800x600/?soil-sensor" alt="Sensor tanah modern"> -->
+                     <img src="/assets/images/sensor tanah juga.png" alt="">
                 </div>
                 
                 <div class="column text-column">
@@ -161,65 +147,53 @@
     <section id="artikel" class="articles-section">
         <div class="container">
             <h2 class="section-title">Artikel Terbaru</h2>
-            
             <div class="articles-grid">
                 <article class="article-card">
-                    <div class="article-image">
-                        <img src="image/smart farming.png" alt="">
-                        <!-- <img src="https://source.unsplash.com/500x300/?smart-farming" alt="Smart Farming"> -->
-                    </div>
+                    <img src="/assets/images/smart farming.png" alt="Smart Farming" class="article-image">
                     <div class="article-content">
-                        <h3 class="article-title">Apa itu Smart Farming?</h3>
-                        <p class="article-excerpt">Pengenalan konsep pertanian cerdas yang mengintegrasikan teknologi informasi dengan praktik pertanian...</p>
-                        <a href="#" class="read-more">Baca Selengkapnya</a>
+                        <h3>Apa itu Smart Farming?</h3>
+                        <p>Pengenalan konsep pertanian cerdas berbasis teknologi informasi.</p>
+                        <a href="artikel-smart-farming.html" class="read-more">Baca Selengkapnya</a>
                     </div>
                 </article>
-                
                 <article class="article-card">
-                    <div class="article-image">
-                        <img src="image/Drone-PT-SUN.png" alt="">
-                        <!-- <img src="https://source.unsplash.com/500x300/?agricultural-drone" alt="Drone Pertanian"> -->
-                    </div>
+                    <img src="/assets/images/drone pertanian fix.jpg" alt="Drone Pertanian" class="article-image">
                     <div class="article-content">
-                        <h3 class="article-title">Manfaat Drone dalam Pertanian</h3>
-                        <p class="article-excerpt">Bagaimana drone dapat membantu petani dalam pemantauan tanaman, penyemprotan pestisida, dan pemetaan lahan...</p>
-                        <a href="#" class="read-more">Baca Selengkapnya</a>
+                        <h3>Manfaat Drone dalam Pertanian</h3>
+                        <p>Drone untuk pemantauan tanaman dan pemetaan lahan.</p>
+                        <a href="artikel-drone.html" class="read-more">Baca Selengkapnya</a>
                     </div>
                 </article>
-                
                 <article class="article-card">
-                    <div class="article-image">
-                        <img src="image/sensor tanah.png" alt="">
-                        <!-- <img src="https://source.unsplash.com/500x300/?soil-sensor" alt="Sensor Tanah"> -->
-                    </div>
+                    <img src="/assets/images/sensor tanah.png" alt="Sensor Tanah" class="article-image">
                     <div class="article-content">
-                        <h3 class="article-title">Sensor Tanah: Cara Kerja dan Fungsinya</h3>
-                        <p class="article-excerpt">Mengenal berbagai jenis sensor tanah dan bagaimana alat ini dapat membantu petani memahami kondisi tanah...</p>
-                        <a href="#" class="read-more">Baca Selengkapnya</a>
+                        <h3>Sensor Tanah: Cara Kerja dan Fungsinya</h3>
+                        <p>Jenis-jenis sensor dan fungsinya dalam analisis kondisi tanah.</p>
+                        <a href="artikel-sensor-tanah.html" class="read-more">Baca Selengkapnya</a>
                     </div>
                 </article>
-                
                 <article class="article-card">
-                    <div class="article-image">
-                        <img src="image/Ilustrasi-Jenis-Saluran-Irigasi-3.jpg" alt="">
-                        <!-- <img src="https://source.unsplash.com/500x300/?irrigation-system" alt="Sistem Irigasi"> -->
-                    </div>
+                    <img src="/assets/images/Ilustrasi-Jenis-Saluran-Irigasi-3.jpg" alt="Sistem Irigasi" class="article-image">
                     <div class="article-content">
-                        <h3 class="article-title">Teknologi Irigasi Otomatis yang Hemat Air</h3>
-                        <p class="article-excerpt">Berbagai teknologi irigasi modern yang dapat menghemat penggunaan air hingga 60% dibandingkan metode konvensional...</p>
-                        <a href="#" class="read-more">Baca Selengkapnya</a>
+                        <h3>Teknologi Irigasi Otomatis yang Hemat Air</h3>
+                        <p>Penghematan air hingga 60% menggunakan teknologi irigasi modern.</p>
+                        <a href="artikel-irigasi.html" class="read-more">Baca Selengkapnya</a>
                     </div>
                 </article>
-                
                 <article class="article-card">
-                    <div class="article-image">
-                        <img src="image/iot pertanian.jpg" alt="">
-                        <!-- <img src="https://source.unsplash.com/500x300/?iot-agriculture" alt="IoT Pertanian"> -->
-                    </div>
+                    <img src="/assets/images/iot pertanian.jpg" alt="IoT Pertanian" class="article-image">
                     <div class="article-content">
-                        <h3 class="article-title">Penerapan IoT dalam Pertanian Skala Kecil</h3>
-                        <p class="article-excerpt">Bagaimana petani kecil dapat memanfaatkan teknologi Internet of Things untuk meningkatkan hasil panen...</p>
-                        <a href="#" class="read-more">Baca Selengkapnya</a>
+                        <h3>Penerapan IoT dalam Pertanian Skala Kecil</h3>
+                        <p>Petani kecil memanfaatkan IoT untuk meningkatkan hasil panen.</p>
+                        <a href="artikel-iot.html" class="read-more">Baca Selengkapnya</a>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <img src="/assets/images/iot pertanian.jpg" alt="IoT Pertanian" class="article-image">
+                    <div class="article-content">
+                        <h3>Penerapan IoT dalam Pertanian Skala Kecil</h3>
+                        <p>Petani kecil memanfaatkan IoT untuk meningkatkan hasil panen.</p>
+                        <a href="artikel-iot.html" class="read-more">Baca Selengkapnya</a>
                     </div>
                 </article>
             </div>
@@ -227,7 +201,7 @@
     </section>
 
     <!-- Kalkulator Teknologi -->
-    <!-- <section class="tech-calculator">
+     <section class="tech-calculator">
         <div class="container">
             <h2 class="section-title">Kalkulator Efisiensi Teknologi</h2>
             <p class="section-description">Hitung peningkatan efisiensi dengan penggunaan teknologi pertanian modern!</p>
@@ -390,6 +364,7 @@
     <!-- Tooltip untuk Teknologi -->
     <div id="tech-tooltip" class="tooltip"></div>
 
-    <script src="script.js"></script>
+   <script src="/assets/js/main.js" defer></script>
+
 </body>
 </html>
