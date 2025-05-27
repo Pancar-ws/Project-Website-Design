@@ -4,45 +4,38 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f9f9f9;
 }
-
-
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
-
 a {
     text-decoration: none;
-    color: #2e7d32; /* Warna hijau untuk tema pertanian */
+    color: #4CAF50; /* Updated to Madani Green */
 }
 
 ul {
     list-style: none;
 }
-
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
-
 section {
     padding: 60px 0;
 }
-
 .section-title {
     text-align: center;
     margin-bottom: 40px;
-    color: #2e7d32;
+    color: #4CAF50; /* Updated to Madani Green */
     font-size: 2rem;
     position: relative;
 }
@@ -52,10 +45,9 @@ section {
     display: block;
     width: 50px;
     height: 3px;
-    background-color: #2e7d32;
+    background-color: #4CAF50; /* Updated to Madani Green */
     margin: 10px auto;
 }
-
 .section-description {
     text-align: center;
     margin-bottom: 30px;
@@ -65,46 +57,93 @@ section {
 }
 
 /* ============== HEADER & NAVIGASI ============== */
-
-
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
 }
-
-/* Navbar Scroll Effect */
+/* ==== DEFAULT NAVBAR (Before Scroll) ==== */
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-    padding: 15px 0;
-    background-color: transparent;
-    transition: background-color 0.3s ease;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: transparent;
+  color: black;
+  transition: all 0.3s ease;
+  justify-content: center;
 }
 
+.navbar .logo i,
+.navbar .logo span {
+  color: #90ee90; /* hijau muda */
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.navbar nav ul li a {
+  color: rgb(14, 13, 13);
+  transition: color 0.3s;
+}
+
+/* Dropdown default */
+.navbar nav ul li .dropdown {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: rgb(250, 246, 246);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar nav ul li .dropdown a {
+  color: black;
+}
+
+/* ==== SCROLLED NAVBAR ==== */
 .navbar.scrolled {
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #00695c; /* hijau tua */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.navbar.scrolled nav ul li a {
+  color: white;
+}
+
+.navbar.scrolled .logo i,
+.navbar.scrolled .logo span {
+  color: #90ee90; /* tetap hijau muda */
+}
+
+/* Dropdown ketika navbar scrolled */
+.navbar.scrolled nav ul li .dropdown {
+  background-color: white;
+}
+
+.navbar.scrolled nav ul li .dropdown a {
+  color: #2e7d32;
+}
+
+
+/* Logo hijau muda */
+.logo span {
+  color: #7cd66b; /* Hijau muda default untuk 'Tani Cerdas' */
+  font-weight: bold;
+  font-size: 1.2rem;
+}
 
 .logo {
     display: flex;
     align-items: center;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #2e7d32;
+    color: #4CAF50; /* Updated to Madani Green */
 }
-
 .logo i {
     margin-right: 5px;
     font-size: 1.2rem;
 }
-
-
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -114,108 +153,10 @@ header .container {
 .bar {
     width: 25px;
     height: 3px;
-    background-color: #2e7d32;
+    background-color: #4CAF50;;
     margin: 3px 0;
     transition: 0.4s;
 }
-
-/* ============== HERO SECTION & SLIDER ============== 
-.hero {
-    position: relative;
-    height: 500px;
-    overflow: hidden;
-}
-
-.slider-container {
-    height: 100%;
-    position: relative;
-}
-
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.8s ease;
-}
-
-.slide.active {
-    opacity: 1;
-    z-index: 1;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.slide-content {
-    position: absolute;
-    bottom: 30%;
-    left: 10%;
-    color: white;
-    max-width: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.slide-content h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.slider-nav {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-    transform: translateY(-50%);
-    z-index: 10;
-}
-
-.slider-nav button {
-    background-color: rgba(255, 255, 255, 0.7);
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-}
-
-.slider-nav button:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-.slider-indicators {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    z-index: 10;
-}
-
-.indicator {
-    width: 12px;
-    height: 12px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.indicator.active {
-    background-color: white;
-}*/
 
 /* Video Slider Styling */
 .hero {
@@ -247,6 +188,9 @@ header .container {
     background-color: #f1f8e9; /* Hijau sangat terang */
 }
 
+.profile-section .container {
+    padding-top: 30px;
+}
 .two-column {
     display: flex;
     align-items: center;
@@ -263,15 +207,15 @@ header .container {
 }
 
 .text-column h2 {
-    color: #2e7d32;
+    color: #4CAF50; /* Updated to Madani Green */
     margin-bottom: 20px;
 }
 
 .highlight {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #1b5e20;
-    border-left: 3px solid #2e7d32;
+    color: #388E3C; /* Updated to Darker Green */
+    border-left: 3px solid #4CAF50; /* Updated to Madani Green */
     padding-left: 15px;
     margin-bottom: 25px;
 }
@@ -282,7 +226,7 @@ header .container {
 }
 
 .vision h3, .mission h3 {
-    color: #2e7d32;
+    color: #4CAF50; /* Updated to Madani Green */
     margin-bottom: 10px;
 }
 
@@ -483,11 +427,11 @@ header .container {
 
 #result-content {
     line-height: 1.8;
-} */
+} 
 
 /* ============== KONTAK ============== */
 .contact-section {
-    background-color: #fff;
+    background-color: #f1f8e9;
 }
 
 .contact-container {
@@ -510,7 +454,7 @@ header .container {
 
 .contact-info {
     padding: 30px;
-    background-color: #e8f5e9;
+    background-color: #f9f9f9;
     border-radius: 10px;
 }
 
@@ -544,7 +488,7 @@ header .container {
     font-size: 1.2rem;
     transition: background-color 0.3s, transform 0.3s;
 }
-
+Y
 .social-icon:hover {
     background-color: #1b5e20;
     transform: scale(1.1);
@@ -552,7 +496,7 @@ header .container {
 
 /* ============== FOOTER ============== */
 footer {
-    background-color: #1b5e20;
+    background-color: #00695c;
     color: white;
     padding: 50px 0 20px;
 }
@@ -701,30 +645,40 @@ footer {
         display: flex;
     }
     
-    nav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: white;
-        padding: 20px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-        display: none;
-        text-align: center;
-    }
-    
-    nav.active {
-        display: block;
-    }
-    
-    nav ul {
-        flex-direction: column;
-    }
-    
-    nav ul li {
-        margin: 10px 0;
-    }
-    
+    /* Awalnya sembunyi di mobile */
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: #00695c; /* hijau tua, sesuai header */
+    position: absolute;
+    top: 60px; /* tinggi header */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li a {
+    color: #a5d6a7; /* hijau muda agar kontras */
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a:hover {
+    background-color: #004d40;
+    color: #ffffff;
+  }
+
     .slide-content {
         max-width: 80%;
         left: 50%;
@@ -763,7 +717,335 @@ footer {
     }
 }
 
-/* ======= DROPDOWN NAVBAR ======= */
+
+/* Artikel IOT */
+.article-detail {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* Perbaikan Ukuran Gambar */
+.article-card .article-image {
+  width: 100%;
+  height: 200px; /* Ukuran tinggi seragam */
+  object-fit: cover;
+  display: block;
+}
+
+.article-detail h1 {
+    font-size: 2.5rem;
+    color: #2c6f2c;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.article-image {
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Paragraf */
+.article-detail p {
+    font-size: 1.125rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Link jika ada */
+a {
+    color: #2c6f2c;
+    text-decoration: none;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .article-detail {
+        padding: 20px 15px;
+    }
+
+    .article-detail h1 {
+        font-size: 2rem;
+    }
+
+    .article-detail p {
+        font-size: 1rem;
+    }
+}
+
+/* ========== PROFIL KAMI ========== */
+    
+  /* Profile Section */
+
+
+/* NAVIGATION */
+
+.profile-section {
+  padding: 60px 0 40px;
+  background-color:  #fafafaf4;
+}
+.profile-section1 {
+  padding: 60px 0 40px;
+  background-color:  #f1f8e9;
+}
+.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+.image-column,
+.text-column {
+  flex: 1 1 45%;
+}
+
+.text-column h2 {
+  color: #2d5016;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.highlight {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.vision-mission h3 {
+  color: #2d5016;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.vision-mission p,
+.vision-mission li {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.vision-mission ul {
+  padding-left: 20px;
+}
+
+/* Journey Section */
+.journey-section {
+  background-color: #ffffff;
+  padding: 60px 0 40px;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+  margin-top: 50px;
+}
+
+.content-section h3 {
+  color: #2d5016;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  text-align: center;   
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  margin-top: 20px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #52b788;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 25px;
+  padding-left: 25px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background: #52b788;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.timeline-year {
+  font-weight: 600;
+  color: #52b788;
+  margin-bottom: 5px;
+}
+
+.timeline-desc {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Team Section */
+.tim-section {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+}
+
+.tim-section h3 {
+  color: #2d5016;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.team-card {
+  background: #ffffff;
+  text-align: center;
+  padding: 25px 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.team-avatar {
+  width: 100px;
+  height: 50px;
+  background: #52b788;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.team-name {
+  font-weight: 600;
+  color: #2d5016;
+  margin-bottom: 5px;
+}
+
+.team-role {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.team-desc {
+  color: #777;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+/* Back Button */
+.back-button {
+  display: inline-block;
+  margin: 40px auto;
+  text-align: center;
+  color: #2d5016;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid #52b788;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.back-button i {
+  margin-right: 8px;
+}
+
+.back-button:hover {
+  background-color: #52b788;
+  color: white;
+  border-color: #52b788;
+}
+
+/* ============== HEADER & NAVIGASI PROFIL ============== */
+
+/* ==== DEFAULT NAVBAR (Before Scroll) ==== */
+.navbar1 {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #00695c; /* hijau tua */
+  justify-content: center;
+}
+
+/* Logo (ikon dan teks) */
+.logo i,
+.logo span {
+  color: #90ee90; /* hijau muda */
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Warna tulisan menu navigasi utama */
+.navbar1 .nav ul li a {
+  color: white; /* ubah jadi putih */
+  transition: color 0.3s;
+}
+
+
+/* Dropdown default */
+.navbar ul li .dropdown {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: rgb(250, 246, 246);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Isi dropdown */
+.navbar ul li .dropdown a {
+  color: black;
+}
+
+.navbar ul li .dropdown a:hover {
+  background-color: #e0f2f1;
+  color: #00695c;
+}
+
 nav ul {
     display: flex;
 }
@@ -778,14 +1060,14 @@ nav ul li a {
     transition: color 0.3s;
     padding: 10px 15px;
     font-weight: 500;
-    color: #2e7d32;
+    color: #fafbfa;
     transition: background-color 0.2s, color 0.2s;
     border-radius: 6px;
 }
 
 nav ul li a:hover {
-    color: #1b5e20;
-    border-bottom: 2px solid #1b5e20;
+    color: #7cd66b;
+    border-bottom: 2px solid #7cd66b;
 }
 
 
@@ -842,5 +1124,17 @@ nav ul li.has-dropdown:hover > a i {
     transform: rotate(180deg);
 }
 
-/* ============== Artikel Smart Farming ============== */
-/* ============== Artikel Smart Farming ============== */
+.team-avatar img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 4px solid #4CAF50; /* opsional: lingkaran hijau */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+

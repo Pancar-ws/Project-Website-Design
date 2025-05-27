@@ -203,13 +203,17 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = 'auto';
     });
 
-     window.addEventListener("scroll", function() {
-        const navbar = document.querySelector(".navbar");
-        if (window.scrollY > 500) {
-        navbar.classList.add("scrolled");
-        } else {
-         navbar.classList.remove("scrolled");
-        }
+     
+  window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 500) {
+      navbar.classList.remove('transparent');
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+      navbar.classList.add('transparent');
+    }  
+
 
         // ================ KALKULATOR EFISIENSI ================
     const calculator = document.getElementById('efficiency-calculator');

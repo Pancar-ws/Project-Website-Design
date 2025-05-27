@@ -5,56 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tani Cerdas - Pengenalan Teknologi Pertanian Modern</title>
     <link rel="stylesheet" href="/assets/css/style.css">
-    
     <!-- Font Awesome untuk ikon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <!-- Header dengan Logo dan Navigasi -->
-    <header class="navbar">
-        <div class="container">
-            <div class="logo">
+        <header class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                <i class="fas fa-leaf"></i><i class="fas fa-tractor"></i><span>Tani Cerdas</span>
+                </a>
 
-                <!-- Logo dengan ikon dan teks -->
-                <i class="fas fa-leaf"></i>
-                <i class="fas fa-tractor"></i>
-                <span>Tani Cerdas</span>
+                <!-- Tombol Hamburger untuk Mobile -->
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                
+    <!-- Menu Navigasi -->
+    <nav>
+        <ul>
+             <li><a href="index.html" class="active">Home</a></li>
+        <li>
+        <a href="#profil">Profil</a>
+        <ul class="dropdown">
+            <li><a href="profil-kami.html">Profil Kita</a></li>
+        </ul>
+        </li>
+        <li><a href="#layanan">Layanan</a></li>
+        <li class="has-dropdown">
+        <a href="#artikel">Artikel <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown">
+            <li><a href="artikel-smart-farming.html">Smart Farming</a></li>
+            <li><a href="artikel-drone.html">Drone Pertanian</a></li>
+            <li><a href="artikel-sensor-tanah.html">Sensor Tanah</a></li>
+            <li><a href="artikel-irigasi.html">Irigasi Otomatis</a></li>
+            <li><a href="artikel-iot.html">IoT Pertanian</a></li>
+            <li><a href="artikel-pertanian-presisi.html">Pertanian Presisi</a></li>
+        </ul>
+            </li>
+        <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
             </div>
-            
-            <!-- Tombol Hamburger untuk Mobile -->
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            
-            <!-- Menu Navigasi -->
-            <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li>
-                <a href="#profil">Profil</a>
-                <ul class="dropdown">
-                    <li><a href="profil-kami.html">Profil Kita</a></li>
-                </ul>
-                </li>
-                <li><a href="#layanan">Layanan</a></li>
-                <li class="has-dropdown">
-                <a href="#artikel">Artikel <i class="fas fa-chevron-down"></i></a>
-                <ul class="dropdown">
-                    <li><a href="artikel_smartfarming.html">Smart Farming</a></li>
-                    <li><a href="artikel-drone.html">Drone Pertanian</a></li>
-                    <li><a href="artikel-sensor-tanah.html">Sensor Tanah</a></li>
-                    <li><a href="artikel-irigasi.html">Irigasi Otomatis</a></li>
-                    <li><a href="artikel-iot.html">IoT Pertanian</a></li>
-                    <li><a href="artikel-iot.html">IoT Skala Kecil</a></li>
-                </ul>
-                </li>
-                <li><a href="#kontak">Kontak</a></li>
-            </ul>
-            </nav>
-        </div>
-    </header>
+        </header>
 
     <!-- Hero Section dengan Slider -->
     <section class="hero">
@@ -64,17 +59,18 @@
         </video>
         <div class="hero-content">
             <h1>Selamat Datang di Tani Cerdas</h1>
-            <p>Membangun Pertanian Indonesia Menjadi Indonesia Lebih Maju</p>
+            <p>Membangun pertanian masa depan</p>
         </div>
     </section>
 
+
     <!-- Bagian Profil - 2 Kolom -->
-    <section id="profil" class="profile-section">
+    <section id="profil" class="profile-section1">
         <div class="container">
             <div class="two-column">
                 <div class="column image-column">
                     <!-- Gambar alat pertanian modern -->
-                     <img src="/assets/images/sensor tanah juga.png" alt="">
+                     <img src="/assets/images/irigation farm.jpg" alt="">
                 </div>
                 
                 <div class="column text-column">
@@ -148,15 +144,15 @@
             <h2 class="section-title">Artikel Terbaru</h2>
             <div class="articles-grid">
                 <article class="article-card">
-                    <img src="/assets/images/smart farming.png" alt="Smart Farming" class="article-image">
+                    <img src="/assets/images/smart farming.jpg" alt="Smart Farming" class="article-image">
                     <div class="article-content">
                         <h3>Apa itu Smart Farming?</h3>
                         <p>Pengenalan konsep pertanian cerdas berbasis teknologi informasi.</p>
-                        <a href="artikel_smartfarming.html" class="read-more">Baca Selengkapnya</a>
+                        <a href="artikel-smart-farming.html" class="read-more">Baca Selengkapnya</a>
                     </div>
                 </article>
                 <article class="article-card">
-                    <img src="/assets/images/drone pertanian fix.jpg" alt="Drone Pertanian" class="article-image">
+                    <img src="/assets/images/farm drone.jpg" alt="Drone Pertanian" class="article-image">
                     <div class="article-content">
                         <h3>Manfaat Drone dalam Pertanian</h3>
                         <p>Drone untuk pemantauan tanaman dan pemetaan lahan.</p>
@@ -164,7 +160,7 @@
                     </div>
                 </article>
                 <article class="article-card">
-                    <img src="/assets/images/sensor tanah.png" alt="Sensor Tanah" class="article-image">
+                    <img src="/assets/images/ground sensor.png" alt="Sensor Tanah" class="article-image">
                     <div class="article-content">
                         <h3>Sensor Tanah: Cara Kerja dan Fungsinya</h3>
                         <p>Jenis-jenis sensor dan fungsinya dalam analisis kondisi tanah.</p>
@@ -172,7 +168,7 @@
                     </div>
                 </article>
                 <article class="article-card">
-                    <img src="/assets/images/Ilustrasi-Jenis-Saluran-Irigasi-3.jpg" alt="Sistem Irigasi" class="article-image">
+                    <img src="/assets/images/irigation farm.jpg" alt="Sistem Irigasi" class="article-image">
                     <div class="article-content">
                         <h3>Teknologi Irigasi Otomatis yang Hemat Air</h3>
                         <p>Penghematan air hingga 60% menggunakan teknologi irigasi modern.</p>
@@ -180,7 +176,7 @@
                     </div>
                 </article>
                 <article class="article-card">
-                    <img src="/assets/images/iot pertanian.jpg" alt="IoT Pertanian" class="article-image">
+                    <img src="/assets/images/iot agriculture.jpg" alt="IoT Pertanian" class="article-image">
                     <div class="article-content">
                         <h3>Penerapan IoT dalam Pertanian Skala Kecil</h3>
                         <p>Petani kecil memanfaatkan IoT untuk meningkatkan hasil panen.</p>
@@ -188,11 +184,11 @@
                     </div>
                 </article>
                 <article class="article-card">
-                    <img src="/assets/images/iot pertanian.jpg" alt="IoT Pertanian" class="article-image">
+                    <img src="/assets/images/precision agriculture.jpg" alt="IoT Pertanian" class="article-image">
                     <div class="article-content">
-                        <h3>Penerapan IoT dalam Pertanian Skala Kecil</h3>
+                        <h3>Pertanian Presisi: Masa Depan Bertani di Indonesia</h3>
                         <p>Petani kecil memanfaatkan IoT untuk meningkatkan hasil panen.</p>
-                        <a href="artikel-iot.html" class="read-more">Baca Selengkapnya</a>
+                        <a href="artikel-pertanian-presisi.html" class="read-more">Baca Selengkapnya</a>
                     </div>
                 </article>
             </div>
@@ -230,7 +226,7 @@
                 <div id="result-content"></div>
             </div>
         </div>
-    </section> -->
+    </section> 
 
     <!-- Bagian Kontak -->
     <section id="kontak" class="contact-section">
